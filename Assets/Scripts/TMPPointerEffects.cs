@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
+[RequireComponent(typeof(TMP_Text))]
 public class TMPPointerEffects : MonoBehaviour,
     IPointerEnterHandler,
     IPointerExitHandler,
