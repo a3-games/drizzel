@@ -6,10 +6,9 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider2D))]
 public class CharacterMovement : MonoBehaviour
 {
-    // TODO: fix these defaults and make them more reasonable
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float gravityScale = 3f;
+    [SerializeField] private float gravityScale = 2.5f;
 
     [Header("Jumping")]
     [SerializeField] private float jumpForce = 10f;
@@ -17,16 +16,16 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float groundCheckDistance = 0.1f;
 
     [Header("Wall Jump")]
-    [SerializeField] private float wallCheckDistance = 0.3f;
-    [SerializeField] private float wallSlideSpeed = 2f;
+    [SerializeField] private float wallCheckDistance = 0.1f;
+    [SerializeField] private float wallSlideSpeed = 4f;
     [SerializeField] private float wallJumpForceX = 8f;
     [SerializeField] private float wallJumpForceY = 12f;
-    [SerializeField] private float wallJumpLockTime = 0.2f;
+    [SerializeField] private float wallJumpLockTime = 1.5f;
 
     [Header("Dash")]
     [SerializeField] private float dashSpeed = 18f;
     [SerializeField] private float dashDuration = 0.15f;
-    [SerializeField] private float dashCooldown = 0.6f;
+    [SerializeField] private float dashCooldown = 3f;
 
     private Animator animator;
     private Rigidbody2D rb;
