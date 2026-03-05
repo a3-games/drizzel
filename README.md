@@ -6,7 +6,7 @@ Welcome to Drizzel, a two-dimensional platformer game where you play as a water 
 
 ## Tools Used
 
-Drizzel is an open-source game built with the [Unity](https://unity.com). It is coded in C# (C Sharp) and uses a variety of two-dimensional assets from [itch.io](https://itch.io).
+Drizzel is an open-source game built with [Unity](https://unity.com). It is coded in C# (C Sharp) and uses a variety of two-dimensional assets from [itch.io](https://itch.io).
 
 ## Acknowledgements
 
