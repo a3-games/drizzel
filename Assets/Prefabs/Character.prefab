@@ -31,7 +31,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 497560165201328511}
+  - {fileID: 4616125156555675410}
   m_Father: {fileID: 6415291770575799029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -129,14 +129,14 @@ RectTransform:
   m_GameObject: {fileID: 3617179417317795794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 497560165201328511}
+  m_Father: {fileID: 4616125156555675410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -1842.0051, y: 931.53076}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2030707497803828117
@@ -204,14 +204,14 @@ RectTransform:
   m_GameObject: {fileID: 5517450361204792016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 497560165201328511}
+  m_Father: {fileID: 4616125156555675410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -1842.0051, y: 931.53076}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8363929932550488445
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &7933331132887451580
+--- !u!1 &5642379125502721908
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,31 +260,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 497560165201328511}
-  m_Layer: 0
+  - component: {fileID: 4616125156555675410}
+  - component: {fileID: 4889783325974255511}
+  m_Layer: 5
   m_Name: Dash Cooldown Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &497560165201328511
-Transform:
+--- !u!224 &4616125156555675410
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7933331132887451580}
-  serializedVersion: 2
+  m_GameObject: {fileID: 5642379125502721908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.002563, y: -25.76538, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3630413602157238761}
   - {fileID: 6825755861757880259}
   m_Father: {fileID: 1324598196405292221}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -100}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4889783325974255511
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642379125502721908}
+  m_CullTransparentMesh: 1
 --- !u!1 &9131125703765248082
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +315,7 @@ GameObject:
   - component: {fileID: 3390361268734230114}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -368,8 +381,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1796379157
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7708597212522857399, guid: ad4340443783099cc89995017730c09b, type: 3}
@@ -458,21 +471,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f9234a051674f4190560bbc555d23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
+  moveAllowed: 1
   moveSpeed: 5
   rotationSpeed: 10
   slopeCheckDistance: 0.5
   slopeSlideSpeed: 1
   gravityScale: 2.5
+  jumpAllowed: 1
   jumpForce: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundCheckDistance: 0.1
+  wallJumpAllowed: 1
   wallCheckDistance: 0.1
   wallSlideSpeed: 4
   wallJumpForceX: 8
   wallJumpForceY: 10
   wallJumpLockTime: 1
+  dashAllowed: 1
   dashSpeed: 18
   dashDuration: 0.15
   dashCooldown: 3

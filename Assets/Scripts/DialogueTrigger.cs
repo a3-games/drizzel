@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TriggerScript : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField]
     private bool oneShot = false;
@@ -9,9 +9,8 @@ public class TriggerScript : MonoBehaviour
     [SerializeField]
     private string targetTag = "Player";
 
-    [TextArea]
     [SerializeField]
-    private string[] dialogueLines;
+    private DialogueLine[] dialogueLines;
 
     public UnityEvent onTriggerEnter;
     public UnityEvent onTriggerExit;
@@ -27,7 +26,7 @@ public class TriggerScript : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             if (dialogueLines != null && dialogueLines.Length > 0)
-                DialogueManager.Instance.StartDialogue(dialogueLines);
+                DialogueManager.Instance.BeginDialogue(dialogueLines);
 
             onTriggerEnter?.Invoke();
         }

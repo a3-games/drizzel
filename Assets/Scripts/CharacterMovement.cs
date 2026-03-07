@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class CharacterMovement : MonoBehaviour
 {
     [Header("Movement")]
+    public bool moveAllowed = true;
+
     [SerializeField]
     private float moveSpeed = 5f;
 
@@ -24,6 +26,8 @@ public class CharacterMovement : MonoBehaviour
     private float gravityScale = 2.5f;
 
     [Header("Jumping")]
+    public bool jumpAllowed = true;
+
     [SerializeField]
     private float jumpForce = 10f;
 
@@ -34,6 +38,8 @@ public class CharacterMovement : MonoBehaviour
     private float groundCheckDistance = 0.1f;
 
     [Header("Wall Jump")]
+    public bool wallJumpAllowed = true;
+
     [SerializeField]
     private float wallCheckDistance = 0.1f;
 
@@ -50,6 +56,8 @@ public class CharacterMovement : MonoBehaviour
     private float wallJumpLockTime = 1f;
 
     [Header("Dash")]
+    public bool dashAllowed = true;
+
     [SerializeField]
     private float dashSpeed = 18f;
 
@@ -100,15 +108,21 @@ public class CharacterMovement : MonoBehaviour
         // Keys for player movement
         if (Keyboard.current != null)
         {
-            if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-                moveInputX -= 1f;
+            if (moveAllowed)
+            {
+                if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
+                    moveInputX -= 1f;
 
-            if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-                moveInputX += 1f;
+                if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
+                    moveInputX += 1f;
+            }
 
             if (
-                Keyboard.current.spaceKey.wasPressedThisFrame
-                || Keyboard.current.upArrowKey.wasPressedThisFrame
+                jumpAllowed
+                && (
+                    Keyboard.current.spaceKey.wasPressedThisFrame
+                    || Keyboard.current.upArrowKey.wasPressedThisFrame
+                )
             )
                 jumpQueued = true;
         }
@@ -220,7 +234,7 @@ public class CharacterMovement : MonoBehaviour
                 wallJumpLockTimer = wallJumpLockTime;
                 animator.SetTrigger("Jump");
             }
-            else if (isTouchingWall && !isGrounded)
+            else if (wallJumpAllowed && isTouchingWall)
             {
                 // If the player is on the wall, do a wall hop
                 velocity.x = -wallDirection * wallJumpForceX;
@@ -228,7 +242,7 @@ public class CharacterMovement : MonoBehaviour
                 wallJumpLockTimer = wallJumpLockTime;
                 animator.SetTrigger("Jump");
             }
-            else if (!isGrounded && !isDashing && dashCooldownTimer <= 0f)
+            else if (dashAllowed && !isDashing && dashCooldownTimer <= 0f)
             {
                 // Dash through the air
                 isDashing = true;
