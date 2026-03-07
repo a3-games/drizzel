@@ -26,7 +26,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private float defaultAdvanceDelay;
 
-    private Queue<DialogueLine[]> dialogueQueue = new Queue<DialogueLine[]>();
     private DialogueLine[] currentLines;
     private int currentLineIndex;
     private bool isTyping;
@@ -45,7 +44,7 @@ public class DialogueManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void BeginDialogue(DialogueLine[] lines)
+    public void BeginDialogue(DialogueLine[] lines)
     {
         currentLines = lines;
         currentLineIndex = 0;
@@ -53,18 +52,6 @@ public class DialogueManager : MonoBehaviour
 
         gameObject.SetActive(true);
         ShowCurrentLine();
-    }
-
-    public void StartDialogue(DialogueLine[] lines)
-    {
-        // Queue the next dialogue if there is already one running
-        if (isDialogueActive || isTyping)
-        {
-            dialogueQueue.Enqueue(lines);
-            return;
-        }
-
-        BeginDialogue(lines);
     }
 
     private void Update()
@@ -149,11 +136,6 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
         gameObject.SetActive(false);
-
-        if (dialogueQueue.Count > 0)
-        {
-            BeginDialogue(dialogueQueue.Dequeue());
-        }
     }
 
     public bool IsDialogueActive() => isDialogueActive;

@@ -26,7 +26,7 @@ public class TriggerScript : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             if (dialogueLines != null && dialogueLines.Length > 0)
-                DialogueManager.Instance.StartDialogue(dialogueLines);
+                DialogueManager.Instance.BeginDialogue(dialogueLines);
 
             onTriggerEnter?.Invoke();
         }
