@@ -74,10 +74,26 @@ public class DialogueManager : MonoBehaviour
         if (!isDialogueActive)
             return;
 
+        bool modifierPressed =
+            Keyboard.current != null && Keyboard.current.shiftKey.isPressed;
         bool advancePressed = Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
 
         if (advancePressed)
         {
+            // If SHIFT + E are pressed at the same time, skip the entire dialogue
+            if (modifierPressed)
+            {
+                EndDialogue();
+
+                DialogueLine line = currentLines[currentLines.Length - 1];
+                characterMovement.moveAllowed = line.moveAllowed;
+                characterMovement.jumpAllowed = line.jumpAllowed;
+                characterMovement.wallJumpAllowed = line.wallJumpAllowed;
+                characterMovement.dashAllowed = line.dashAllowed;
+
+                return;
+            }
+
             if (isTyping)
                 FinishTyping();
             else
