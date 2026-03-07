@@ -254,11 +254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[3].speaker
-      value: The Cave
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[4].speaker
-      value: The Cave
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[5].speaker
@@ -270,15 +270,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[7].speaker
-      value: The Cave
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[8].speaker
-      value: The Cave
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[9].speaker
-      value: The Cave
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[0].Dialogue
@@ -624,7 +624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5194450905127627994, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5194450905127627994, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -632,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5194450905127627994, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 5194450905127627994, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -915,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[0].speaker
-      value: The Cavern
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[1].speaker
@@ -923,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[2].speaker
-      value: The Cavern
+      value: Cave
       objectReference: {fileID: 0}
     - target: {fileID: 1317100978998197740, guid: 97e88e93d0be8446ca55570b8de282a4, type: 3}
       propertyPath: dialogueLines.Array.data[0].dialogue
@@ -1094,10 +1094,6 @@ PrefabInstance:
     - target: {fileID: 466808231399793731, guid: 5ddff7516bc854834adae2785134c8f3, type: 3}
       propertyPath: m_text
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2065334452124912798, guid: 5ddff7516bc854834adae2785134c8f3, type: 3}
-      propertyPath: defaultHint
-      value: '[E] to continue.'
       objectReference: {fileID: 0}
     - target: {fileID: 2065334452124912798, guid: 5ddff7516bc854834adae2785134c8f3, type: 3}
       propertyPath: typingSpeed
@@ -1339,10 +1335,6 @@ PrefabInstance:
       propertyPath: fadeImage
       value: 
       objectReference: {fileID: 766326262}
-    - target: {fileID: 6400649689037142210, guid: 72ee2e19c77202f43ae23179c77234cb, type: 3}
-      propertyPath: fadeDuration
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1578,7 +1570,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8840497606405015999, guid: 9b5ce589884007c67a4c083391fcf952, type: 3}
       propertyPath: jumpAllowed
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840497606405015999, guid: 9b5ce589884007c67a4c083391fcf952, type: 3}
+      propertyPath: moveAllowed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8840497606405015999, guid: 9b5ce589884007c67a4c083391fcf952, type: 3}
       propertyPath: slopeSlideSpeed

@@ -191,4 +191,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScreenFader
   fadeImage: {fileID: 7339256803775296294}
-  fadeDuration: 1
+  fadeDuration: 0.5
