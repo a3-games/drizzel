@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -115,11 +114,24 @@ public class DialogueManager : MonoBehaviour
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
-        dialogueText.text = currentLines[currentLineIndex].dialogue;
-        dialogueHint.text = string.IsNullOrEmpty(currentLines[currentLineIndex].hint)
-            ? defaultHint
-            : currentLines[currentLineIndex].hint;
+        DialogueLine line = currentLines[currentLineIndex];
+        dialogueText.text = line.dialogue;
+        dialogueHint.text = string.IsNullOrEmpty(line.hint) ? defaultHint : line.hint;
         isTyping = false;
+
+        if (!line.advanceManually)
+            typingCoroutine = StartCoroutine(AutoAdvanceAfterDelay(line));
+    }
+
+    private IEnumerator AutoAdvanceAfterDelay(DialogueLine line)
+    {
+        yield return new WaitForSeconds(
+            line.advanceDelay <= 0f ? defaultAdvanceDelay : line.advanceDelay
+        );
+        if (currentLineIndex >= currentLines.Length - 1)
+            EndDialogue();
+        else
+            AdvanceLine();
     }
 
     private void AdvanceLine()
