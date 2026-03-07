@@ -8,6 +8,9 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     [SerializeField]
+    private string targetTag = "Player";
+
+    [SerializeField]
     private float typingDelay = 0.03f;
 
     [SerializeField]
@@ -25,6 +28,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private float defaultAdvanceDelay;
 
+    private CharacterMovement characterMovement;
     private DialogueLine[] currentLines;
     private int currentLineIndex;
     private bool isTyping;
@@ -39,6 +43,18 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        GameObject player = GameObject.FindWithTag(targetTag);
+        characterMovement = player.GetComponent<CharacterMovement>();
+
+        if (characterMovement == null)
+        {
+            Debug.LogError(
+                "Could not attach to the character movement component. No dialogues will appear."
+            );
+            Destroy(gameObject);
+            return;
+        }
 
         gameObject.SetActive(false);
     }
@@ -84,8 +100,12 @@ public class DialogueManager : MonoBehaviour
         dialogueSpeaker.text = line.speaker;
         dialogueText.text = "";
         dialogueHint.text = "";
-
         dialogueText.color = line.dialogueColor;
+
+        characterMovement.moveAllowed = line.moveAllowed;
+        characterMovement.jumpAllowed = line.jumpAllowed;
+        characterMovement.wallJumpAllowed = line.wallJumpAllowed;
+        characterMovement.dashAllowed = line.dashAllowed;
 
         foreach (char c in line.dialogue)
         {
@@ -94,6 +114,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
+
         dialogueHint.text = string.IsNullOrEmpty(line.hint) ? defaultHint : line.hint;
 
         if (!line.advanceManually)
@@ -114,10 +135,11 @@ public class DialogueManager : MonoBehaviour
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
+        isTyping = false;
+
         DialogueLine line = currentLines[currentLineIndex];
         dialogueText.text = line.dialogue;
         dialogueHint.text = string.IsNullOrEmpty(line.hint) ? defaultHint : line.hint;
-        isTyping = false;
 
         if (!line.advanceManually)
             typingCoroutine = StartCoroutine(AutoAdvanceAfterDelay(line));

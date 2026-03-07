@@ -294,11 +294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ebe1e28b159452fa3ac268d98920b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  targetTag: Player
   typingDelay: 0.03
   dialogueSpeaker: {fileID: 6707082504403889481}
   dialogueText: {fileID: 7643699539282969436}
   dialogueHint: {fileID: 7530853287645962139}
-  defaultHint: '[E] to continue'
+  defaultHint: '[E] to continue.'
   defaultAdvanceDelay: 0
 --- !u!1 &5170014571601219474
 GameObject:

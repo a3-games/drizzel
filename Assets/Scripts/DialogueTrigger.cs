@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TriggerScript : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField]
     private bool oneShot = false;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4730262690902314910}
   - component: {fileID: 1317100978998197740}
   m_Layer: 0
-  m_Name: Collision Trigger
+  m_Name: Dialogue Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
