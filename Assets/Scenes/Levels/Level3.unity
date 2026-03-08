@@ -4329,7 +4329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955965911323651706, guid: 9525b3d5b1da20a438e1dd060632a7f2, type: 3}
       propertyPath: sceneName
-      value: EndScreen
+      value: Level3Cutscene
       objectReference: {fileID: 0}
     - target: {fileID: 8517498599949967541, guid: 9525b3d5b1da20a438e1dd060632a7f2, type: 3}
       propertyPath: m_LocalPosition.x
