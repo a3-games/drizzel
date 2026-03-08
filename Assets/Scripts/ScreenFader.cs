@@ -69,28 +69,32 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        float t = 0f;
         SetAlpha(0f);
         fadeImage.raycastTarget = true; // block input during fade
+
+        float t = 0f;
         while (t < fadeDuration)
         {
             t += Time.unscaledDeltaTime;
             SetAlpha(Mathf.Clamp01(t / fadeDuration));
             yield return null;
         }
+
         SetAlpha(1f);
     }
 
     private IEnumerator FadeIn()
     {
-        float t = 0f;
         SetAlpha(1f);
+
+        float t = 0f;
         while (t < fadeDuration)
         {
             t += Time.unscaledDeltaTime;
             SetAlpha(1f - Mathf.Clamp01(t / fadeDuration));
             yield return null;
         }
+
         SetAlpha(0f);
         fadeImage.raycastTarget = false; // re-enable input
     }
