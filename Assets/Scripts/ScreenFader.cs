@@ -13,8 +13,6 @@ public class ScreenFader : MonoBehaviour
     [SerializeField]
     private float fadeDuration = 1f;
 
-    private bool isFirstLoad = true;
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -29,11 +27,6 @@ public class ScreenFader : MonoBehaviour
         SetAlpha(1f);
     }
 
-    private void Start()
-    {
-        StartCoroutine(FadeIn());
-    }
-
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -46,12 +39,6 @@ public class ScreenFader : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (isFirstLoad)
-        {
-            isFirstLoad = false;
-            return;
-        }
-
         StartCoroutine(FadeIn());
     }
 
@@ -86,6 +73,10 @@ public class ScreenFader : MonoBehaviour
     private IEnumerator FadeIn()
     {
         SetAlpha(1f);
+        fadeImage.raycastTarget = true;
+
+        for (int i = 0; i < 5; i++)
+            yield return null;
 
         float t = 0f;
         while (t < fadeDuration)
