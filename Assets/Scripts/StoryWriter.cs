@@ -31,21 +31,18 @@ public class StoryWriter : MonoBehaviour
 
     public IEnumerator BeginStory()
     {
-        Debug.Log("Started story.");
-
         // Fade in and fade out each line
         foreach (StoryLine line in storyLines)
         {
             currentLine = line;
-            Debug.Log("Line: " + line);
 
-            currentLine.onLineStart.Invoke();
+            line.onLineStart.Invoke();
             yield return StartCoroutine(FadeInLine());
-
             yield return new WaitForSeconds(line.advanceDelay);
 
             yield return StartCoroutine(FadeOutLine());
-            currentLine.onLineEnd.Invoke();
+            yield return new WaitForSeconds(line.intermissionDuration);
+            line.onLineEnd.Invoke();
         }
     }
 

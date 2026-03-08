@@ -9,6 +9,7 @@ public class StoryLine
     public Color lineColor;
     public float fadeDuration;
     public float advanceDelay;
+    public float intermissionDuration;
     public UnityEvent onLineStart;
     public UnityEvent onLineEnd;
 }
