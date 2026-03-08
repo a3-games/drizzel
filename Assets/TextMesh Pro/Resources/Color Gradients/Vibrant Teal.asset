@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vibrant Teal
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_ColorGradient
   colorMode: 2
-  topLeft: {r: 0.8443396, g: 1, b: 0.98344034, a: 1}
-  topRight: {r: 0.8443396, g: 1, b: 0.98344034, a: 1}
-  bottomLeft: {r: 0.025631888, g: 0.6037736, b: 0.47295323, a: 1}
-  bottomRight: {r: 0.025631888, g: 0.6037736, b: 0.47295323, a: 1}
+  topLeft: {r: 0.9103774, g: 1, b: 0.98965895, a: 1}
+  topRight: {r: 0.9103774, g: 1, b: 0.98965895, a: 1}
+  bottomLeft: {r: 0.3563101, g: 0.4811321, b: 0.45367125, a: 1}
+  bottomRight: {r: 0.3563101, g: 0.4811321, b: 0.45367125, a: 1}
