@@ -94,18 +94,23 @@ public class CharacterMovement : MonoBehaviour
     public bool isGrounded = false;
 
     [HideInInspector]
-    public bool jumpPressed = false;
+    public bool didJump = false;
 
     private bool jumpQueued = false;
     private float coyoteTimer;
 
     [HideInInspector]
-    public bool isTouchingWall;
+    public bool didWallJump = false;
 
+    private bool isTouchingWall;
     private bool isWallSliding;
     private int wallDirection; // -1 = left, 1 = right
     private float wallJumpLockTimer;
     private bool isDashing;
+
+    [HideInInspector]
+    public bool didDash = false;
+
     private float dashTimer;
     private float dashCooldownTimer;
     private float dashExitTimer;
@@ -123,7 +128,6 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         moveInputX = 0f;
-        jumpPressed = false;
 
         // Keys for player movement
         if (Keyboard.current != null)
@@ -145,10 +149,13 @@ public class CharacterMovement : MonoBehaviour
                 )
             )
             {
-                jumpPressed = true;
                 jumpQueued = true;
             }
         }
+
+        didJump = false;
+        didWallJump = false;
+        didDash = false;
     }
 
     private void FixedUpdate()
@@ -261,6 +268,7 @@ public class CharacterMovement : MonoBehaviour
                 velocity.y = jumpForce;
                 wallJumpLockTimer = wallJumpLockTime;
                 coyoteTimer = 0f;
+                didJump = true;
                 animator.SetTrigger("Jump");
             }
             else if (wallJumpAllowed && isTouchingWall)
@@ -269,6 +277,7 @@ public class CharacterMovement : MonoBehaviour
                 velocity.x = -wallDirection * wallJumpForceX;
                 velocity.y = wallJumpForceY;
                 wallJumpLockTimer = wallJumpLockTime;
+                didWallJump = true;
                 animator.SetTrigger("Jump");
             }
             else if (
@@ -284,6 +293,7 @@ public class CharacterMovement : MonoBehaviour
                 dashTimer = dashDuration;
                 dashDirection = new Vector2(lastDirection, 0f);
                 rb.gravityScale = 0f;
+                didDash = true;
                 animator.SetTrigger("Dash");
             }
         }

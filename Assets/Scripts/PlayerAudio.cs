@@ -35,6 +35,20 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField]
     private float minAirborneTime = 0.3f;
 
+    [Header("Wall Jump")]
+    [SerializeField]
+    private AudioClip wallJumpStartSFX;
+
+    [SerializeField]
+    private float wallJumpStartVolume = 1f;
+
+    [Header("Dash")]
+    [SerializeField]
+    private AudioClip dashSFX;
+
+    [SerializeField]
+    private float dashVolume = 1f;
+
     [Header("Death")]
     [SerializeField]
     private AudioClip deathSFX;
@@ -76,27 +90,34 @@ public class PlayerAudio : MonoBehaviour
         if (airborneTimer >= minAirborneTime)
             wasAirborne = true;
 
-        // Jumping
-        if (
-            !playerDeath.isDead
-            && characterMovement.jumpPressed
-            && (groundedGraceTimer > 0f || characterMovement.isTouchingWall)
-            && !DialogueManager.Instance.IsDialogueActive()
-        )
+        if (!playerDeath.isDead)
         {
-            AudioManager.Instance.PlayAudio(jumpStartSFX, jumpStartVolume);
-            wasAirborne = true;
-        }
+            // Jumping
+            if (characterMovement.didJump && !DialogueManager.Instance.IsDialogueActive())
+            {
+                AudioManager.Instance.PlayAudio(jumpStartSFX, jumpStartVolume);
+                wasAirborne = true;
+            }
 
-        // Landing
-        if (!playerDeath.isDead && wasAirborne && isGrounded)
-        {
-            AudioManager.Instance.PlayAudio(jumpLandSFX, jumpLandVolume);
-            wasAirborne = false;
-        }
+            // Wall jump
+            if (characterMovement.didWallJump && !DialogueManager.Instance.IsDialogueActive())
+            {
+                AudioManager.Instance.PlayAudio(wallJumpStartSFX, wallJumpStartVolume);
+                wasAirborne = true;
+            }
 
-        // Death
-        if (playerDeath.isDead && !hasDied)
+            // Landing
+            if (wasAirborne && isGrounded)
+            {
+                AudioManager.Instance.PlayAudio(jumpLandSFX, jumpLandVolume);
+                wasAirborne = false;
+            }
+
+            // Dash
+            if (characterMovement.didDash)
+                AudioManager.Instance.PlayAudio(dashSFX, dashVolume);
+        }
+        else if (!hasDied) // death
         {
             AudioManager.Instance.PlayAudio(deathSFX, deathVolume);
             hasDied = true;

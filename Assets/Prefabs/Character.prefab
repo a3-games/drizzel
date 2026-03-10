@@ -500,7 +500,9 @@ MonoBehaviour:
   dashIndicatorUnderlay: {fileID: 4207328997254084510}
   moveInputX: 0
   isGrounded: 1
-  jumpPressed: 0
+  didJump: 0
+  didWallJump: 0
+  didDash: 0
 --- !u!114 &3390361268734230114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,17 +532,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a186284ae4e7781fa09bd6db68b641e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  footstepSFX: {fileID: 8300000, guid: 4755b59d054e73171a34515a1b0fb34c, type: 3}
-  footstepVolume: 0.4
+  footstepSFX: {fileID: 8300000, guid: fccdd8468bc4d693f861a453bb55dbd4, type: 3}
+  footstepVolume: 0.6
   footstepDelay: 0.5
-  jumpStartSFX: {fileID: 8300000, guid: db873d5a9f3784588af28f20ea8ba13d, type: 3}
-  jumpStartVolume: 1
-  jumpLandSFX: {fileID: 8300000, guid: 8db0b686f3a03d40395a65c628e83a63, type: 3}
-  jumpLandVolume: 1
+  jumpStartSFX: {fileID: 8300000, guid: 14f8efd2395b1b9c4a4016564a8849ef, type: 3}
+  jumpStartVolume: 0.3
+  jumpLandSFX: {fileID: 8300000, guid: 1b2594ef7eb2fa2e896f666c9075ffd2, type: 3}
+  jumpLandVolume: 0.6
   groundedGraceTime: 0.1
   minAirborneTime: 0.3
+  wallJumpStartSFX: {fileID: 8300000, guid: f66c3ccb64d1a91cc8cf0abb041ce0c0, type: 3}
+  wallJumpStartVolume: 0.6
+  dashSFX: {fileID: 8300000, guid: e457aa0208b994e6a8a81a1781999c1d, type: 3}
+  dashVolume: 0.6
   deathSFX: {fileID: 8300000, guid: b64f988d73b26db90ac2ddf3d86cfac7, type: 3}
-  deathVolume: 1
+  deathVolume: 0.5
 --- !u!95 &1900083835764998174
 Animator:
   serializedVersion: 7
