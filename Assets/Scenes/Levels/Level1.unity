@@ -1775,6 +1775,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8797203976845237502, guid: bc3ab5ab0327c9d6a9c01c91c83a2b88, type: 3}
+      propertyPath: backgroundLoops.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797203976845237502, guid: bc3ab5ab0327c9d6a9c01c91c83a2b88, type: 3}
+      propertyPath: backgroundLoops.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797203976845237502, guid: bc3ab5ab0327c9d6a9c01c91c83a2b88, type: 3}
+      propertyPath: backgroundLoops.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a649d3c1c714f9eaa38cc99c0dc4394, type: 3}
     - target: {fileID: 9075364676145536385, guid: bc3ab5ab0327c9d6a9c01c91c83a2b88, type: 3}
       propertyPath: m_Name
       value: Audio Manager
