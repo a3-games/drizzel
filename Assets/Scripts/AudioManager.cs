@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(AudioClip audioClip, float volume = 1f, bool loop = false)
     {
-        StartCoroutine(PlayCoroutine(audioClip, volume));
+        StartCoroutine(PlayCoroutine(audioClip, volume, loop));
     }
 
     private IEnumerator PlayCoroutine(AudioClip audioClip, float volume = 1f, bool loop = false)
@@ -41,8 +41,12 @@ public class AudioManager : MonoBehaviour
         audioSource.loop = loop;
         audioSource.Play();
 
-        yield return new WaitForSeconds(audioSource.clip.length * 2);
-
-        Destroy(audioSource);
+        if (!loop)
+        {
+            yield return new WaitForSeconds(audioSource.clip.length);
+            Destroy(audioSource);
+        }
+        else
+            yield break;
     }
 }
