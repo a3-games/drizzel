@@ -12,7 +12,9 @@ public class PlayerDeath : MonoBehaviour
 
     private ScreenFader screenFader;
     private Animator animator;
-    private bool isDead;
+
+    [HideInInspector]
+    public bool isDead;
 
     private void Awake()
     {

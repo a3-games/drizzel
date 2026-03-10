@@ -83,13 +83,25 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
 
-    private float moveInputX;
+    [HideInInspector]
+    public float moveInputX;
+
     private float lastDirection = 1f;
     private float slopeSlideTime;
     private Vector2 slopeNormal = Vector2.up;
-    private bool jumpQueued;
+
+    [HideInInspector]
+    public bool isGrounded = false;
+
+    [HideInInspector]
+    public bool jumpPressed = false;
+
+    private bool jumpQueued = false;
     private float coyoteTimer;
-    private bool isTouchingWall;
+
+    [HideInInspector]
+    public bool isTouchingWall;
+
     private bool isWallSliding;
     private int wallDirection; // -1 = left, 1 = right
     private float wallJumpLockTimer;
@@ -111,6 +123,7 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         moveInputX = 0f;
+        jumpPressed = false;
 
         // Keys for player movement
         if (Keyboard.current != null)
@@ -131,7 +144,10 @@ public class CharacterMovement : MonoBehaviour
                     || Keyboard.current.upArrowKey.wasPressedThisFrame
                 )
             )
+            {
+                jumpPressed = true;
                 jumpQueued = true;
+            }
         }
     }
 
@@ -153,7 +169,7 @@ public class CharacterMovement : MonoBehaviour
             dashIndicatorUnderlay.enabled = false;
         }
 
-        bool isGrounded = Physics2D.Raycast(
+        isGrounded = Physics2D.Raycast(
             col.bounds.center,
             Vector2.down,
             col.bounds.extents.y + groundCheckDistance,
