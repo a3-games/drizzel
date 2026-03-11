@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 9fcc36833d8dd5723a4857becfa181ca
+guid: 355d76ce3aa2f5679b1f231d43888029
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4426933547838425834
-    second: overlay_0
+      213: 1143692212453745536
+    second: overlay 1_0
   - first:
-      213: 362434342028301353
-    second: overlay_1
+      213: -8400058990937896210
+    second: overlay 1_1
   - first:
-      213: 4447117151435667556
-    second: overlay_2
+      213: -8894884838742078783
+    second: overlay 1_2
   - first:
-      213: 8984005300218550440
-    second: overlay_3
+      213: -4258074760583544043
+    second: overlay 1_3
+  - first:
+      213: -8657811493042081173
+    second: overlay 1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,12 +125,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: overlay_0
+      name: overlay 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 31
         y: 127
-        width: 97
+        width: 98
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 615b4d4a46f5092c0800000000000000
-      internalID: -4426933547838425834
+      spriteID: 083afa7f1063fdf00800000000000000
+      internalID: 1143692212453745536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: overlay_1
+      name: overlay 1_1
       rect:
         serializedVersion: 2
-        x: 140
+        x: 172
         y: 132
-        width: 71
+        width: 69
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -159,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 924dff22d10a70500800000000000000
-      internalID: 362434342028301353
+      spriteID: eea02d86adefc6b80800000000000000
+      internalID: -8400058990937896210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: overlay_2
+      name: overlay 1_2
       rect:
         serializedVersion: 2
         x: 35
@@ -181,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 468bed5cc7557bd30800000000000000
-      internalID: 4447117151435667556
+      spriteID: 1ca45c4cd550f8480800000000000000
+      internalID: -8894884838742078783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: overlay_3
+      name: overlay 1_3
       rect:
         serializedVersion: 2
-        x: 194
+        x: 99
         y: 0
-        width: 28
-        height: 30
+        width: 26
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +206,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a8d0c3a8399dac70800000000000000
-      internalID: 8984005300218550440
+      spriteID: 5138c54c09748e4c0800000000000000
+      internalID: -4258074760583544043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: overlay 1_4
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62bee0715649d780800000000000000
+      internalID: -8657811493042081173
       vertices: []
       indices: 
       edges: []
@@ -223,10 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      overlay_0: -4426933547838425834
-      overlay_1: 362434342028301353
-      overlay_2: 4447117151435667556
-      overlay_3: 8984005300218550440
+      overlay 1_0: 1143692212453745536
+      overlay 1_1: -8400058990937896210
+      overlay 1_2: -8894884838742078783
+      overlay 1_3: -4258074760583544043
+      overlay 1_4: -8657811493042081173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
