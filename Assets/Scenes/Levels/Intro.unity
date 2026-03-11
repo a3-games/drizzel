@@ -1134,7 +1134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[0].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[10].lineColor.b
@@ -1226,7 +1226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[1].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[2].advanceDelay
@@ -1234,7 +1234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[2].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[3].advanceDelay
@@ -1242,7 +1242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[3].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[4].advanceDelay
@@ -1250,7 +1250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[4].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[5].advanceDelay
@@ -1258,7 +1258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[5].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[6].advanceDelay
@@ -1266,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[6].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[7].advanceDelay
@@ -1274,7 +1274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[7].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[8].advanceDelay
@@ -1282,7 +1282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[8].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[9].advanceDelay
@@ -1290,7 +1290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[9].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[10].advanceDelay
@@ -1298,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[10].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[11].advanceDelay
@@ -1306,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[11].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[12].advanceDelay
@@ -1314,7 +1314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[12].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[13].advanceDelay
@@ -1322,7 +1322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[13].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[14].advanceDelay
@@ -1330,7 +1330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[14].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[15].advanceDelay
@@ -1338,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[15].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[16].advanceDelay
@@ -1346,7 +1346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[16].fadeDuration
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2483668177161727343, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: storyLines.Array.data[0].intermissionDuration
