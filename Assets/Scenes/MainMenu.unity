@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be02ae9b823c6684e9fb55f38c1e09be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxEffect
-  offsetMultiplier: 20
+  offsetMultiplier: 30
   smoothTime: 0.5
   horizontalParallax: 1
   verticalParallax: 0
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be02ae9b823c6684e9fb55f38c1e09be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxEffect
-  offsetMultiplier: 10
+  offsetMultiplier: 20
   smoothTime: 0.5
   horizontalParallax: 1
   verticalParallax: 0
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be02ae9b823c6684e9fb55f38c1e09be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxEffect
-  offsetMultiplier: 10
+  offsetMultiplier: 20
   smoothTime: 0.5
   horizontalParallax: 1
   verticalParallax: 0
@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be02ae9b823c6684e9fb55f38c1e09be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxEffect
-  offsetMultiplier: 10
+  offsetMultiplier: 20
   smoothTime: 0.5
   horizontalParallax: 1
   verticalParallax: 0
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be02ae9b823c6684e9fb55f38c1e09be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxEffect
-  offsetMultiplier: 10
+  offsetMultiplier: 20
   smoothTime: 0.5
   horizontalParallax: 1
   verticalParallax: 0
