@@ -1,12 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
 public class ParallaxEffect : MonoBehaviour
 {
-    public float offsetMultiplier = 50f;
-    public float smoothTime = 0.2f;
+    [SerializeField]
+    private float offsetMultiplier = 50f;
+
+    [SerializeField]
+    private float smoothTime = 0.2f;
+
+    [SerializeField]
+    private bool horizontalParallax = true;
+
+    [SerializeField]
+    private bool verticalParallax = true;
 
     private RectTransform rectTransform;
     private Vector2 startPosition;
@@ -22,19 +29,22 @@ public class ParallaxEffect : MonoBehaviour
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
 
-        // -1 <= offset <= 1
-        float offsetX = (mousePos.x - Screen.width / 2f) / (Screen.width / 2f);
-        float offsetY = (mousePos.y - Screen.height / 2f) / (Screen.height / 2f);
+        float offsetX = -1 * (mousePos.x - Screen.width / 2f) / (Screen.width / 2f);
+        float offsetY = -1 * (mousePos.y - Screen.height / 2f) / (Screen.height / 2f);
 
         Vector2 targetPosition =
-            startPosition + new Vector2(offsetX * offsetMultiplier, offsetY * offsetMultiplier);
+            startPosition
+            + new Vector2(
+                horizontalParallax ? offsetX * offsetMultiplier : 0f,
+                verticalParallax ? offsetY * offsetMultiplier : 0f
+            );
 
         float halfWidth = rectTransform.rect.width * rectTransform.lossyScale.x / 2f;
         float halfHeight = rectTransform.rect.height * rectTransform.lossyScale.y / 2f;
 
         // Clamp to stop image from escaping view
-        float clampX = Mathf.Max(halfWidth - Screen.width / 2f, 0);
-        float clampY = Mathf.Max(halfHeight - Screen.height / 2f, 0);
+        float clampX = horizontalParallax ? offsetMultiplier : 0f;
+        float clampY = verticalParallax ? offsetMultiplier : 0f;
 
         targetPosition.x = Mathf.Clamp(
             targetPosition.x,

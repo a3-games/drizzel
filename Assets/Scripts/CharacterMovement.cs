@@ -83,17 +83,34 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
 
-    private float moveInputX;
+    [HideInInspector]
+    public float moveInputX;
+
     private float lastDirection = 1f;
     private float slopeSlideTime;
     private Vector2 slopeNormal = Vector2.up;
-    private bool jumpQueued;
+
+    [HideInInspector]
+    public bool isGrounded = false;
+
+    [HideInInspector]
+    public bool didJump = false;
+
+    private bool jumpQueued = false;
     private float coyoteTimer;
+
+    [HideInInspector]
+    public bool didWallJump = false;
+
     private bool isTouchingWall;
     private bool isWallSliding;
     private int wallDirection; // -1 = left, 1 = right
     private float wallJumpLockTimer;
     private bool isDashing;
+
+    [HideInInspector]
+    public bool didDash = false;
+
     private float dashTimer;
     private float dashCooldownTimer;
     private float dashExitTimer;
@@ -131,8 +148,14 @@ public class CharacterMovement : MonoBehaviour
                     || Keyboard.current.upArrowKey.wasPressedThisFrame
                 )
             )
+            {
                 jumpQueued = true;
+            }
         }
+
+        didJump = false;
+        didWallJump = false;
+        didDash = false;
     }
 
     private void FixedUpdate()
@@ -153,7 +176,7 @@ public class CharacterMovement : MonoBehaviour
             dashIndicatorUnderlay.enabled = false;
         }
 
-        bool isGrounded = Physics2D.Raycast(
+        isGrounded = Physics2D.Raycast(
             col.bounds.center,
             Vector2.down,
             col.bounds.extents.y + groundCheckDistance,
@@ -245,6 +268,7 @@ public class CharacterMovement : MonoBehaviour
                 velocity.y = jumpForce;
                 wallJumpLockTimer = wallJumpLockTime;
                 coyoteTimer = 0f;
+                didJump = true;
                 animator.SetTrigger("Jump");
             }
             else if (wallJumpAllowed && isTouchingWall)
@@ -253,6 +277,7 @@ public class CharacterMovement : MonoBehaviour
                 velocity.x = -wallDirection * wallJumpForceX;
                 velocity.y = wallJumpForceY;
                 wallJumpLockTimer = wallJumpLockTime;
+                didWallJump = true;
                 animator.SetTrigger("Jump");
             }
             else if (
@@ -268,6 +293,7 @@ public class CharacterMovement : MonoBehaviour
                 dashTimer = dashDuration;
                 dashDirection = new Vector2(lastDirection, 0f);
                 rb.gravityScale = 0f;
+                didDash = true;
                 animator.SetTrigger("Dash");
             }
         }

@@ -34,8 +34,14 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeOutAndLoad(string sceneName)
     {
-        // Fade to black
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.FadeOutAll(fadeDuration);
+
         yield return StartCoroutine(FadeOut());
+
+        if (!fadeOut)
+            yield return new WaitForSeconds(fadeDuration);
+
         SceneManager.LoadScene(sceneName);
     }
 

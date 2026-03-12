@@ -311,8 +311,9 @@ GameObject:
   - component: {fileID: 8747790641308643086}
   - component: {fileID: 9192349342854939918}
   - component: {fileID: 8840497606405015999}
-  - component: {fileID: 1900083835764998174}
   - component: {fileID: 3390361268734230114}
+  - component: {fileID: 4825352710794523252}
+  - component: {fileID: 1900083835764998174}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -483,6 +484,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheckDistance: 0.1
+  coyoteTime: 0.24
   wallJumpAllowed: 1
   wallCheckDistance: 0.1
   wallSlideSpeed: 4
@@ -493,8 +495,58 @@ MonoBehaviour:
   dashSpeed: 18
   dashDuration: 0.15
   dashCooldown: 3
+  minDashWallDistance: 1
   dashIndicatorOverlay: {fileID: 8431747825884221921}
   dashIndicatorUnderlay: {fileID: 4207328997254084510}
+  moveInputX: 0
+  isGrounded: 1
+  didJump: 0
+  didWallJump: 0
+  didDash: 0
+--- !u!114 &3390361268734230114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131125703765248082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4ea7d1f64258041a0d172f8f65904e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
+  deathLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  deathDelay: 1
+  isDead: 0
+--- !u!114 &4825352710794523252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131125703765248082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a186284ae4e7781fa09bd6db68b641e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  footstepSFX: {fileID: 8300000, guid: 7fd6827a0b50175d7bd7682cb6c986c7, type: 3}
+  footstepVolume: 0.6
+  footstepDelay: 0.5
+  jumpStartSFX: {fileID: 8300000, guid: 14f8efd2395b1b9c4a4016564a8849ef, type: 3}
+  jumpStartVolume: 0.3
+  jumpLandSFX: {fileID: 8300000, guid: 1b2594ef7eb2fa2e896f666c9075ffd2, type: 3}
+  jumpLandVolume: 0.6
+  groundedGraceTime: 0.1
+  minAirborneTime: 0.3
+  wallJumpStartSFX: {fileID: 8300000, guid: f66c3ccb64d1a91cc8cf0abb041ce0c0, type: 3}
+  wallJumpStartVolume: 0.6
+  dashSFX: {fileID: 8300000, guid: e457aa0208b994e6a8a81a1781999c1d, type: 3}
+  dashVolume: 0.6
+  deathSFX: {fileID: 8300000, guid: b64f988d73b26db90ac2ddf3d86cfac7, type: 3}
+  deathVolume: 0.5
 --- !u!95 &1900083835764998174
 Animator:
   serializedVersion: 7
@@ -517,19 +569,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3390361268734230114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9131125703765248082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca4ea7d1f64258041a0d172f8f65904e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
-  deathLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  deathDelay: 1
