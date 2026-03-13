@@ -378,8 +378,11 @@ public class CharacterMovement : MonoBehaviour
 
         float dist = bounds.extents.x + distance;
 
-        return IsWall(Physics2D.Raycast(top, direction, dist, groundLayer))
-            || IsWall(Physics2D.Raycast(center, direction, dist, groundLayer))
-            || IsWall(Physics2D.Raycast(bottom, direction, dist, groundLayer));
+        bool hitTop = IsWall(Physics2D.Raycast(top, direction, dist, groundLayer));
+        bool hitCenter = IsWall(Physics2D.Raycast(center, direction, dist, groundLayer));
+        bool hitBottom =
+            !isGrounded && IsWall(Physics2D.Raycast(bottom, direction, dist, groundLayer));
+
+        return hitTop || hitCenter || hitBottom;
     }
 }
