@@ -1,20 +1,22 @@
 # Drizzel
 
-The surface is scorched. All water above has evaporated. You must descend and meet with other droplets of your kind.
+You are a single drop of water.
 
-Welcome to Drizzel, a two-dimensional platformer game where you play as a water droplet whose mission is to survive by dodging obstacles and navigating the deep, dark caverns.
+You fall alone, descending through ancient caverns where jagged stone walls close in and silence engulfs the caves. Every obstacle is a threat. Every passage forward is a small step forward. Drizzel is a two-dimensional platformer about something fragile finding its way through a world that was never built for it.
+
+Can you survive the deep?
 
 ## Tools Used
 
-Drizzel is an open-source game built with [Unity](https://unity.com). It is coded in C# (C Sharp) and uses a variety of two-dimensional assets from [itch.io](https://itch.io).
+Drizzel is an open-source game built with [Unity](https://unity.com). It is coded in C# (C-Sharp) and uses a variety of two-dimensional assets from [itch.io](https://itch.io) and [OpenGameArt](https://opengameart.org).
 
 ## Acknowledgements
 
-Special thanks to [Hack Club](https://hackclub.com) for hosting the Campfire hackathon event during which this game was built.
+Special thanks to [Hack Club](https://hackclub.com) for hosting the Campfire hackathon event during which we began developing Drizzel. More thanks to Hack Club for hosting [Ember](https://itch.io/jam/ember), the two-week online game jam for which this game is built.
 
-Additional thanks to the artists at [itch.io](https://itch.io) and [Newgrounds](https://newgrounds.com) for their huge collection of free sprites, fonts, and music.
+Additional thanks to the artists at [itch.io](https://itch.io) and [OpenGameArt](https://opengameart.org) for their awesome collection of free sprites, fonts, and music.
 
-Credits to [v81d](https://github.com/v81d) for designing and animating the water droplet character (Drippy).
+Credits to [v81d](https://github.com/v81d) for designing and animating the water droplet character.
 
 ## Contributing
 
@@ -40,3 +42,7 @@ Drizzel is free software distributed under the **GNU Lesser General Public Licen
 
 You are free to use, modify, and share the software under the terms of the LGPL.
 For full details, see the [GNU Lesser General Public License v2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html).
+
+All third-party assets in this game are either in the public domain (under [CC0](https://creativecommons.org/public-domain/cc0)) or free to use.
+
+Proprietary code or portions of the compiled game are not included in this source repository.
