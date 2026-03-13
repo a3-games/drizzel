@@ -203,7 +203,8 @@ public class CharacterMovement : MonoBehaviour
         bool pushingIntoWall =
             (moveInputX > 0.1f && wallDirection == 1)
             || (moveInputX < -0.1f && wallDirection == -1);
-        isWallSliding = isTouchingWall && !isGrounded && pushingIntoWall;
+        isWallSliding =
+            isTouchingWall && !isGrounded && pushingIntoWall && rb.linearVelocity.y <= 0f;
 
         if (wallJumpLockTimer > 0f)
             wallJumpLockTimer -= Time.fixedDeltaTime;
