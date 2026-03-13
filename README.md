@@ -38,7 +38,7 @@ Please follow the [GitHub flow](https://guides.github.com/introduction/flow) and
 
 ## License
 
-Drizzel is free software distributed under the **GNU Lesser General Public License, version 2.1 (LGPL-2.1).**
+Drizzel is free software distributed under the **GNU Lesser General Public License, version 2.1 (LGPL-2.1)**.
 
 You are free to use, modify, and share the software under the terms of the LGPL.
 For full details, see the [GNU Lesser General Public License v2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html).
