@@ -42,6 +42,7 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
 
         GameObject player = GameObject.FindWithTag(targetTag);

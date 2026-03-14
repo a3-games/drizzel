@@ -21,6 +21,7 @@ public class StoryWriter : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
     }
 
