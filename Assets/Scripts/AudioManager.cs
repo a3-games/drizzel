@@ -134,4 +134,20 @@ public class AudioManager : MonoBehaviour
         Instance = null;
         Destroy(gameObject);
     }
+
+    public void PauseAll()
+    {
+        AudioSource[] sources = GetComponents<AudioSource>();
+
+        foreach (AudioSource source in sources)
+            source.Pause();
+    }
+
+    public void ResumeAll()
+    {
+        AudioSource[] sources = GetComponents<AudioSource>();
+
+        foreach (AudioSource source in sources)
+            source.UnPause();
+    }
 }

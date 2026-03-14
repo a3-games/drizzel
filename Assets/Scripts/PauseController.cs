@@ -3,8 +3,20 @@ using UnityEngine.InputSystem;
 
 public class PauseController : MonoBehaviour
 {
+    public static PauseController Instance { get; private set; }
+
     [HideInInspector]
     public bool isPaused = false;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     private void Update()
     {
@@ -19,13 +31,17 @@ public class PauseController : MonoBehaviour
 
     private void PauseGame()
     {
-        Time.timeScale = 0;
         isPaused = true;
+
+        Time.timeScale = 0;
+        AudioManager.Instance.PauseAll();
     }
 
     private void ResumeGame()
     {
-        Time.timeScale = 1;
         isPaused = false;
+
+        Time.timeScale = 1;
+        AudioManager.Instance.ResumeAll();
     }
 }
