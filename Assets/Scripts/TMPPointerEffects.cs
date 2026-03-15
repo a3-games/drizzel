@@ -26,6 +26,12 @@ public class TMPPointerEffects
         startingColor = tmpText.color;
     }
 
+    private void OnDisable()
+    {
+        isHovering = false;
+        tmpText.color = startingColor;
+    }
+
     public void OnPointerEnter(PointerEventData _) // hovering over text
     {
         isHovering = true;

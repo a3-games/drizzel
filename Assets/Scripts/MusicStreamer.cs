@@ -15,6 +15,7 @@ public class MusicStreamer : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
     }
 

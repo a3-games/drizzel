@@ -21,6 +21,7 @@ public class StoryWriter : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
     }
 
@@ -55,7 +56,7 @@ public class StoryWriter : MonoBehaviour
         float t = 0f;
         while (t < currentLine.fadeDuration)
         {
-            t += Time.unscaledDeltaTime;
+            t += Time.deltaTime;
             storyboardText.alpha = Mathf.Clamp01(t / currentLine.fadeDuration);
             yield return null;
         }
@@ -70,7 +71,7 @@ public class StoryWriter : MonoBehaviour
         float t = 1f;
         while (t < currentLine.fadeDuration)
         {
-            t += Time.unscaledDeltaTime;
+            t += Time.deltaTime;
             storyboardText.alpha = Mathf.Clamp01(1 - t / currentLine.fadeDuration);
             yield return null;
         }
