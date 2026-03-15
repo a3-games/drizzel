@@ -47,44 +47,56 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        if (fadeOut)
+        if (!fadeOut)
+            yield break;
+
+        if (PauseController.Instance != null)
+            PauseController.Instance.sceneIsTransitioning = true;
+
+        SetAlpha(0f);
+        fadeImage.raycastTarget = true; // block input during fade
+
+        float t = 0f;
+        while (t < fadeDuration)
         {
-            SetAlpha(0f);
-            fadeImage.raycastTarget = true; // block input during fade
-
-            float t = 0f;
-            while (t < fadeDuration)
-            {
-                t += Time.unscaledDeltaTime;
-                SetAlpha(Mathf.Clamp01(t / fadeDuration));
-                yield return null;
-            }
-
-            SetAlpha(1f);
+            t += Time.unscaledDeltaTime;
+            SetAlpha(Mathf.Clamp01(t / fadeDuration));
+            yield return null;
         }
+
+        SetAlpha(1f);
+
+        if (PauseController.Instance != null)
+            PauseController.Instance.sceneIsTransitioning = false;
     }
 
     private IEnumerator FadeIn()
     {
-        if (fadeIn)
+        if (!fadeIn)
+            yield break;
+
+        if (PauseController.Instance != null)
+            PauseController.Instance.sceneIsTransitioning = true;
+
+        SetAlpha(1f);
+        fadeImage.raycastTarget = true;
+
+        for (int i = 0; i < 5; i++)
+            yield return null;
+
+        float t = 0f;
+        while (t < fadeDuration)
         {
-            SetAlpha(1f);
-            fadeImage.raycastTarget = true;
-
-            for (int i = 0; i < 5; i++)
-                yield return null;
-
-            float t = 0f;
-            while (t < fadeDuration)
-            {
-                t += Time.unscaledDeltaTime;
-                SetAlpha(1f - Mathf.Clamp01(t / fadeDuration));
-                yield return null;
-            }
-
-            SetAlpha(0f);
-            fadeImage.raycastTarget = false; // re-enable input
+            t += Time.unscaledDeltaTime;
+            SetAlpha(1f - Mathf.Clamp01(t / fadeDuration));
+            yield return null;
         }
+
+        SetAlpha(0f);
+        fadeImage.raycastTarget = false; // re-enable input
+
+        if (PauseController.Instance != null)
+            PauseController.Instance.sceneIsTransitioning = false;
     }
 
     private void SetAlpha(float alpha)

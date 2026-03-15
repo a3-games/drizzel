@@ -299,7 +299,7 @@ MonoBehaviour:
   dialogueSpeaker: {fileID: 6707082504403889481}
   dialogueText: {fileID: 7643699539282969436}
   dialogueHint: {fileID: 7530853287645962139}
-  defaultHint: '[E] to continue.'
+  defaultHint: '[E] to continue. [SHIFT]-[E] to skip all.'
   defaultAdvanceDelay: 0
 --- !u!1 &5170014571601219474
 GameObject:

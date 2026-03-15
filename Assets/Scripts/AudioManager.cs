@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
     }
 
@@ -121,7 +122,7 @@ public class AudioManager : MonoBehaviour
 
         while (timer < fadeTime)
         {
-            timer += Time.unscaledDeltaTime;
+            timer += Time.deltaTime;
             float t = Mathf.Clamp01(timer / fadeTime);
             for (int i = 0; i < sources.Length; i++)
             {
@@ -133,5 +134,21 @@ public class AudioManager : MonoBehaviour
 
         Instance = null;
         Destroy(gameObject);
+    }
+
+    public void PauseAll()
+    {
+        AudioSource[] sources = GetComponents<AudioSource>();
+
+        foreach (AudioSource source in sources)
+            source.Pause();
+    }
+
+    public void ResumeAll()
+    {
+        AudioSource[] sources = GetComponents<AudioSource>();
+
+        foreach (AudioSource source in sources)
+            source.UnPause();
     }
 }
