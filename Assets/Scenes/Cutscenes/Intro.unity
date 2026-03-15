@@ -808,6 +808,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 589000897272295252, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 2121957103161517782, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1383,6 +1387,22 @@ PrefabInstance:
     - target: {fileID: 5151483088891196591, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
       propertyPath: m_Name
       value: Storyboard Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057110941069006483, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057110941069006483, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057110941069006483, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057110941069006483, guid: e3ce64cb87e80aa4b8197122a403999c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
