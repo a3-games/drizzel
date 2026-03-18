@@ -38,11 +38,11 @@ Please follow the [GitHub flow](https://guides.github.com/introduction/flow) and
 
 ## License
 
-Drizzel is free software distributed under the **GNU Lesser General Public License, version 2.1 (LGPL-2.1)**.
+Drizzel is free software distributed under the **GNU General Public License, version 3.0 or later (GPL-3.0+)** with a [Unity Engine Linking Exception](LICENSE.exception).
 
-You are free to use, modify, and share the software under the terms of the LGPL.
-For full details, see the [GNU Lesser General Public License v2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html).
+You are free to use, modify, and share the software under the terms of the GPL.
+For full details, see the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
 
-All third-party assets in this game are either in the public domain (under [CC0](https://creativecommons.org/public-domain/cc0)) or free to use.
+All third-party assets in this game are either in the public domain (under [CC0](https://creativecommons.org/public-domain/cc0)) or are free to use.
 
 Proprietary code or portions of the compiled game are not included in this source repository.
